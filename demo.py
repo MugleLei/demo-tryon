@@ -1,13 +1,12 @@
-import cv2
+# import cv2
 import argparse
-import numpy as np
+# import numpy as np
 from PIL import Image
 import os
 
 from ACGPN.predict_pose import generate_pose_keypoints
-from U2Net import u2net_load
-from U2Net import u2net_run
-u2net = u2net_load.model(model_name = 'u2netp')
+# from U2Net import u2net_load
+# from U2Net import u2net_run
 
 parser = argparse.ArgumentParser(description='try on demo')
 parser.add_argument("--src", type=str, default='')
@@ -26,7 +25,8 @@ cloth = Image.open(args.src)
 cloth = cloth.resize((192, 256), Image.BICUBIC).convert('RGB')
 cloth.save(os.path.join('ACGPN/Data_preprocessing/test_color', src_name))
 
-u2net_run.infer(u2net, 'ACGPN/Data_preprocessing/test_color', 'ACGPN/Data_preprocessing/test_edge')
+# u2net = u2net_load.model(model_name = 'u2netp')
+# u2net_run.infer(u2net, 'ACGPN/Data_preprocessing/test_color', 'ACGPN/Data_preprocessing/test_edge')
 
 img = Image.open(args.dst)
 img = img.resize((192,256), Image.BICUBIC)
