@@ -2,3 +2,4 @@
 *.png
 *.pth
 *.json
+.ipynb_checkpoints/

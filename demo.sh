@@ -19,7 +19,8 @@ rm ${dp_dir}/test_pose/*
 # 计算试穿模特的姿势，将结果保存在test_pose中
 python demo.py --src $1 --dst $2
 
-# 将衣服模特mask放在test_edge中
+# 对test_color中试穿模特的衣服进行分割
+# 试穿模特衣服mask保存在test_edge中
 python schp/upcloth_extractor.py --input-dir "${dp_dir}/test_color" --output-dir "${dp_dir}/test_edge"
 
 # 对test_img中试穿模特的衣服进行分割

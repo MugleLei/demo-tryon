@@ -19,4 +19,4 @@ output_grid = np.concatenate([
                 np.array(Image.open(f'results/try-on_{dst_name}'))
                 ], axis=1)
 image_grid = Image.fromarray(output_grid)
-image_grid.save(f"results/grid_{dst_name}")
+image_grid.save(f"results/{src_name[:-4]}-on-{dst_name}")
