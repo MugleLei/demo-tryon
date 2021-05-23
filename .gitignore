@@ -3,3 +3,16 @@
 *.pth
 *.json
 .ipynb_checkpoints/
+
+ACGPN/.idea/
+ACGPN/results/
+ACGPN/runs/
+ACGPN/sample/
+ACGPN/checkpoints/
+ACGPN/Data_preprocessing/
+
+*.pyc
+*.cpython-38.pyc
+*.zip
+*.caffemodel
+
